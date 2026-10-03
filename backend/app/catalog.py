@@ -1,0 +1,23 @@
+# Textos editoriais originais; nenhuma consulta externa é feita em execução.
+GAMES = [
+('elden-ring','Elden Ring','Atravesse ruínas douradas e enfrente semideuses em um mundo que recompensa cada desvio de caminho.','RPG','PC,PlayStation,Xbox',2022,'FromSoftware','#c2a45c',1245620),
+('hollow-knight','Hollow Knight','Desça a um reino de insetos esquecido, conectando passagens secretas em uma aventura delicada e desafiadora.','Metroidvania','PC,PlayStation,Xbox,Switch',2017,'Team Cherry','#708cac',367520),
+('hades','Hades','Escape do submundo em tentativas intensas, criando laços com deuses que têm muito a dizer sobre sua fuga.','Roguelike','PC,PlayStation,Xbox,Switch',2020,'Supergiant Games','#d65346',1145360),
+('stardew-valley','Stardew Valley','Transforme um terreno esquecido em um lar e encontre seu próprio ritmo entre colheitas, amizades e explorações.','Simulação','PC,PlayStation,Xbox,Switch',2016,'ConcernedApe','#71b76d',413150),
+('baldurs-gate-3','Baldur’s Gate 3','Reúna um grupo improvável e escreva uma jornada de escolhas difíceis, magia e encontros que mudam tudo.','RPG','PC,PlayStation,Xbox',2023,'Larian Studios','#bd8c59',1086940),
+('cyberpunk-2077','Cyberpunk 2077','Construa sua reputação nas ruas de Night City, onde implantes, ambição e memórias disputam seu futuro.','RPG','PC,PlayStation,Xbox',2020,'CD Projekt Red','#d6d345',1091500),
+('red-dead-redemption-2','Red Dead Redemption 2','Acompanhe uma gangue em declínio enquanto o velho oeste cede espaço a um mundo que já não a aceita.','Aventura','PC,PlayStation,Xbox',2018,'Rockstar Games','#bc3939',1174180),
+('the-witcher-3','The Witcher 3','Siga os rastros de Ciri em terras marcadas pela guerra, aceitando contratos em que monstros nem sempre têm garras.','RPG','PC,PlayStation,Xbox,Switch',2015,'CD Projekt Red','#8fabb6',292030),
+('celeste','Celeste','Escale uma montanha de desafios precisos enquanto Madeline aprende a conviver com suas próprias inseguranças.','Plataforma','PC,PlayStation,Xbox,Switch',2018,'Maddy Makes Games','#dc8db7',504230),
+('disco-elysium','Disco Elysium','Investigue um crime e sua própria identidade em uma cidade onde cada conversa pode revelar outra versão de você.','RPG','PC,PlayStation,Xbox,Switch',2019,'ZA/UM','#caa078',632470),
+('outer-wilds','Outer Wilds','Explore um pequeno sistema solar em transformação e descubra o que uma civilização deixou escrito entre as estrelas.','Aventura','PC,PlayStation,Xbox,Switch',2019,'Mobius Digital','#d8954d',753640),
+('portal-2','Portal 2','Dobre o espaço para resolver testes engenhosos em um laboratório cuja inteligência artificial tem planos próprios.','Puzzle','PC,PlayStation,Xbox,Switch',2011,'Valve','#69c1d5',620),
+('god-of-war','God of War','Viaje pelos reinos nórdicos com Kratos e Atreus em uma história sobre luto, herança e aprender a ser pai.','Ação','PC,PlayStation',2018,'Santa Monica Studio','#799eae',1593500),
+('sekiro','Sekiro: Shadows Die Twice','Domine o ritmo de cada duelo enquanto um shinobi desafia exércitos e a própria morte para cumprir seu juramento.','Ação','PC,PlayStation,Xbox',2019,'FromSoftware','#b8876c',814380),
+('death-stranding','Death Stranding','Reconecte comunidades isoladas cruzando paisagens silenciosas onde cada entrega deixa um caminho para alguém.','Aventura','PC,PlayStation,Xbox',2019,'Kojima Productions','#8ea5a8',1850570),
+('neon-white','Neon White','Combine cartas e movimentos velozes para atravessar o paraíso em fases feitas para aquela última tentativa perfeita.','Ação','PC,PlayStation,Xbox,Switch',2022,'Angel Matrix','#d36379',1533420),
+('spiritfarer','Spiritfarer','Cuide de um barco e de seus passageiros espirituais em uma viagem acolhedora sobre despedidas e boas lembranças.','Simulação','PC,PlayStation,Xbox,Switch',2020,'Thunder Lotus','#daa765',972660),
+('dead-cells','Dead Cells','Experimente armas e rotas em um castelo mutável, transformando cada derrota em conhecimento para a próxima corrida.','Roguelike','PC,PlayStation,Xbox,Switch',2018,'Motion Twin','#986ad4',588650),
+('undertale','Undertale','Encontre criaturas inesquecíveis em um mundo subterrâneo onde ouvir pode ser mais poderoso que atacar.','RPG','PC,PlayStation,Xbox,Switch',2015,'Toby Fox','#947dc3',391540),
+('no-mans-sky','No Man’s Sky','Trace sua rota por planetas desconhecidos, construa bases e transforme a imensidão do universo em descobertas pessoais.','Exploração','PC,PlayStation,Xbox,Switch',2016,'Hello Games','#67b7b3',275850),
+]
