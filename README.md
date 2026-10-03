@@ -10,7 +10,7 @@ cd GameShelf
 code .
 ```
 
-O repositório é privado: use uma conta com acesso. Se `code` não estiver no PATH, abra a pasta GameShelf pelo menu **Arquivo → Abrir Pasta** do VS Code.
+O repositório é público e pode ser clonado por qualquer pessoa. Se `code` não estiver no PATH, abra a pasta GameShelf pelo menu **Arquivo → Abrir Pasta** do VS Code.
 
 ## Executar no Windows (PowerShell)
 
@@ -189,3 +189,30 @@ O SQLite contém quatro tabelas: `users`, `sessions`, `games` e `entries`. Nota 
 O repositório inclui código-fonte, lockfile npm, exemplos de configuração, testes e capas. `.env`, bancos SQLite, ambiente virtual, `node_modules` e artefatos de build ficam fora do Git. Cada clone deve preparar seu próprio ambiente e banco seguindo este documento.
 
 Este repositório contém a aplicação; enviar o código ao GitHub não hospeda automaticamente o frontend ou a API. As capas pertencem aos respectivos titulares, conforme as atribuições. Nenhuma licença de redistribuição dessas artes é concedida pelo projeto.
+## Publicar uma demonstração no Render
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/LeandroHn/GameShelf)
+
+A configuração [render.yaml](render.yaml) publica frontend e API em um único serviço Python nativo, sem Docker, no plano gratuito. A URL `onrender.com` permanece a mesma enquanto o serviço existir. O serviço pode dormir por inatividade, e o primeiro acesso pode demorar.
+
+**O banco da demonstração é temporário:** no plano gratuito, o SQLite é perdido quando o serviço reinicia, dorme ou é publicado novamente. O seed recria o catálogo e a conta demo. Use dados fictícios; essa configuração serve para testar o produto, não para guardar uma coleção importante. O banco da sua instalação local não é enviado.
+
+1. Clique no botão acima e entre ou crie sua conta Render.
+2. Autorize o acesso ao repositório GameShelf se solicitado.
+3. Crie o Blueprint com o plano **Free** e aguarde o build.
+4. Abra a URL exibida pelo serviço quando o deploy estiver **Live**.
+5. Crie uma conta de teste na interface. A senha da conta demo é gerada pelo Render e fica em **Environment → DEMO_PASSWORD**, visível apenas ao responsável pelo serviço.
+
+A origem permitida é configurada automaticamente a partir de `RENDER_EXTERNAL_URL`. Cookies usam Secure sobre HTTPS. Para um domínio próprio, inclua também sua origem em `ALLOWED_ORIGINS` no comando de inicialização. A demonstração exibe um aviso sobre a natureza temporária dos dados.
+
+Para preservar o SQLite, seria necessário contratar um plano e disco persistente, e alterar `DATABASE_URL` para o caminho montado. Isso não está habilitado nesta configuração gratuita. Limites: [Render Free](https://render.com/docs/free).
+
+### Executar o build completo localmente em um único endereço
+
+Depois de `npm run build` em frontend e de preparar o banco, execute dentro de backend:
+
+```powershell
+.\.venv\Scripts\python.exe -m uvicorn app.web:app --host 127.0.0.1 --port 4173
+```
+
+Abra http://localhost:4173. Não execute o preview do Vite nessa mesma porta ao mesmo tempo. O teste adicional `test_web.py` verifica as rotas do frontend compilado e retorna 404 para caminhos indevidos; é pulado quando o build não existe.

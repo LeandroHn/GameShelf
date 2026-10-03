@@ -185,6 +185,12 @@ export default function App() {
         </div>
       </header>
       <main>
+        {import.meta.env.VITE_DEMO_MODE === "true" && (
+          <aside className="demo-notice">
+            Ambiente de demonstração: use dados fictícios. Contas, notas e
+            coleções podem ser apagadas quando o serviço reiniciar.
+          </aside>
+        )}
         {!ready ? (
           <Loading />
         ) : error ? (

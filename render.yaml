@@ -1,0 +1,26 @@
+# Free demonstration: SQLite is ephemeral on Render's free plan.
+services:
+  - type: web
+    name: gameshelf
+    runtime: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt && npm --prefix frontend ci && npm --prefix frontend run build
+    startCommand: cd backend && export ALLOWED_ORIGINS="$RENDER_EXTERNAL_URL" && python -m app.seed && uvicorn app.web:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/games
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.15
+      - key: NODE_VERSION
+        value: 22.16.0
+      - key: DATABASE_URL
+        value: sqlite:///./demo.db
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: SESSION_HOURS
+        value: "24"
+      - key: DEMO_EMAIL
+        value: demo@example.com
+      - key: DEMO_PASSWORD
+        generateValue: true
+      - key: VITE_DEMO_MODE
+        value: "true"

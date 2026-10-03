@@ -1373,3 +1373,14 @@ label {
     scroll-behavior: auto !important;
   }
 }
+
+.demo-notice {
+  margin-bottom: 24px;
+  padding: 12px 16px;
+  border: 1px solid #65517e;
+  border-radius: 8px;
+  background: #241c30;
+  color: #d3c0ed;
+  font-size: 12px;
+  line-height: 1.6;
+}
